@@ -27,8 +27,8 @@ function restar(numero1, numero2) {
 }
 
 const operador = prompt('Ingrese + o -');
-const numero1 = 1;
-const numero2 = 2;
+const numero1 = Number(prompt('Ingrese un numero'));
+const numero2 = Number(prompt('Ingreso otro numero'));
 
 let resultado;
 if (operador === '+') {

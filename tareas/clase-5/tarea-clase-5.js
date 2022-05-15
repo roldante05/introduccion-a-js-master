@@ -17,10 +17,31 @@ $botonCalcular.onclick = function()
 }
 */
 
+
+
+
 //TAREA: completar tareas/clase-5/index.html para que incluya tarea-clase-5.js
 //TAREA: crear un formulario donde un usuario pueda ingresar su salario anual.
 //cuando el usuario haga click en el botón "calcular", mostrar el salario mensual
 // en una caja de texto deshabilitada. --> <input type="text" disabled id="salario-mensual"/>
+
+
+const $botonCalcular = document.querySelector("#boton-calcular");
+const MESES_EN_UN_ANIO = 12;
+
+$botonCalcular.onclick = function () {
+  let salarioAnual = Number(document.getElementById("salarioAnual").value);
+  let resultado = salarioAnual / MESES_EN_UN_ANIO;
+  document.getElementById("salario-mensual").value = "$ " + resultado.toLocaleString('es', { style: 'currency', currency: 'ARS' });;
+  if (salarioAnual == salarioAnual) {
+  document.getElementById("salarioAnual").value = "";
+}
+
+  return false;
+
+}
+
+
 
 //TAREA: En otro archivo html (no Index) y otro archivo js (no tarea-clase-5.js),
 // creá un formulario que capture el primer nombre, segundo nombre, apellido/s y edad del usuario
