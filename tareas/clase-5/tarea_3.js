@@ -1,12 +1,12 @@
 $botonEnviar = document.querySelector("#calcular_tiempo");
 $botonEnviar.onclick = function () {
-  let hora = Number(document.querySelector("#txtHora").value);
-  let minuto = Number(document.querySelector("#txtMinuto").value);
-  let segundo = Number(document.querySelector("#txtSegundo").value);
+  const hora = Number(document.querySelector("#txtHora").value);
+  const minuto = Number(document.querySelector("#txtMinuto").value);
+  const segundo = Number(document.querySelector("#txtSegundo").value);
 
-  let horaDos = Number(document.querySelector("#txtHoraDos").value);
-  let minutoDos = Number(document.querySelector("#txtMinutoDos").value);
-  let segundoDos = Number(document.querySelector("#txtSegundoDos").value);
+  const horaDos = Number(document.querySelector("#txtHoraDos").value);
+  const minutoDos = Number(document.querySelector("#txtMinutoDos").value);
+  const segundoDos = Number(document.querySelector("#txtSegundoDos").value);
 
   let sumHora = hora + horaDos;
   let sumMin = minuto + minutoDos;
