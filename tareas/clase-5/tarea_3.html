@@ -18,8 +18,8 @@
 <body>
 
     <form action="" method="post">
-        <div class="row ms-4">
-            <div class="col-sm-3">
+        <div class="row shadow mx-auto bg-secondary mt-5">
+            <div class="col-sm-4 ms-auto  bg-info mt-3 fw-bolder  rounded-start">
                 <label for="">Horas</label>
                 <input type="text" id="txtHora" class="form-control" placeholder="">
                 <label for="">Minutos</label>
@@ -27,7 +27,7 @@
                 <label for="">Segundos</label>
                 <input type="text" id="txtSegundo" class="form-control" placeholder="">
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-4 me-auto bg-info mt-3 pb-3 fw-bolder rounded-end">
                 <label for="">Horas</label>
                 <input type="text" id="txtHoraDos" class="form-control" placeholder="">
                 <label for="">Minutos</label>
@@ -35,14 +35,20 @@
                 <label for="">Segundos</label>
                 <input type="text" id="txtSegundoDos" class="form-control" placeholder="">
             </div>
-            <div>
-                <button id="calcular_tiempo" type="button" class="btn btn-primary">Calcular tiempo total</button>
+
+
+            <div id="resultado" class="my-5 mx-auto d-flex justify-content-center">
+                <div class="fw-bolder">
+                    Horas <input type="number" disabled class="bg-white" id="hor-total" />
+                    Minutos <input type="number" disabled class="bg-white" id="min-total" />
+                    Segundos <input type="number" disabled class="bg-white" id="seg-total" />
+                </div>
             </div>
 
-            <div id="resultado">
-                Horas <input type="number" disabled id="hor-total" />
-                Minutos <input type="number" disabled id="min-total" />
-                Segundos <input type="number" disabled id="seg-total" />
+            <div class="my-3 d-flex justify-content-evenly ">
+                <button id="calcular_tiempo" type="button" class="btn btn-primary fw-bolder">Calcular tiempo
+                    total</button>
+                <button id="" type="reset" class="btn btn-success fw-bolder">Resetear</button>
             </div>
         </div>
     </form>

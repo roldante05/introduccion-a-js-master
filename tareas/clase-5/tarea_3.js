@@ -26,9 +26,9 @@ $botonEnviar.onclick = function () {
     sumSeg;
   }
 
-  document.querySelector("#hor-total").value = sumHora;
-  document.querySelector("#min-total").value = sumMin;
-  document.querySelector("#seg-total").value = sumSeg;
+  document.querySelector("#hor-total").value = sumHora.toFixed();
+  document.querySelector("#min-total").value = sumMin.toFixed();
+  document.querySelector("#seg-total").value = sumSeg.toFixed();
 
   return false;
 };
