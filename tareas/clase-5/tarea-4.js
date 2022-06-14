@@ -13,6 +13,7 @@ function conversionEnArray() {
     arr.push(Number(numeros[index].innerText));
   }
 }
+
 conversionEnArray();
 
 function promedio() {
@@ -30,19 +31,36 @@ function numeroMenor() {
   buscarMenor = Math.min(...arr);
   return buscarMenor;
 }
+
 numeroMenor();
+
 function numeroMayor() {
   let buscarMayor = 0;
   buscarMayor = Math.max(...arr);
   return buscarMayor;
 }
+
 numeroMayor();
+
+function numeroRepetitivo() {
+  arr.sort();
+  let numeroDuplicado = 0;
+  for (let index = 0; index < arr.length; index++) {
+    if (arr[index + 1] === arr[index]) {
+      numeroDuplicado = arr[index];
+    }
+  }
+  return numeroDuplicado;
+}
+
+numeroRepetitivo();
 
 $boton = document.querySelector("#calcular-numeros");
 $boton.onclick = function () {
   document.querySelector("#promedio").innerText = promedio();
   document.querySelector("#numero-menor").innerText = numeroMenor();
   document.querySelector("#numero-mayor").innerText = numeroMayor();
+  document.querySelector("#numero-duplicado").innerText = numeroRepetitivo();
 
   return false;
 };
